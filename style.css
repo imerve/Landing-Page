@@ -169,7 +169,7 @@ section #text span
     justify-content: space-around;
     flex-wrap: wrap;
     position: relative;
-    padding: 100px;
+    padding-top: 100px;
     background: linear-gradient(to bottom, #1B2A27 0%, white 200%);
     z-index: 2;
 }
@@ -257,6 +257,7 @@ transform: rotate(90deg);
     align-items: center;
     width: 100vw;
     height: 60vh;
+    background-size: cover;
 }
 
 

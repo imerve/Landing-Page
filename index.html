@@ -45,9 +45,9 @@
         <div id="parallax-header"><h2>Parallax Scrolling Effect</h2></div>
         <div id="mainbox">
             <div class="box" id="box"> 
-                <div class="box1"> <img src="img/waves.png" id="waves" > </div>    
-                <div class="box1" onmouseover="diVresimactive1()" onmouseout="diVresimpasive2()"> <img src="img/origami.png" id="origami"  > </div>   
-                <div class="box1"> <img src="img/stars.png" id="stars2" > </div>    
+                <div class="box1" onmouseover="diVresimactive1('mainbox','waves')" onmouseout="diVresimpasive2('mainbox')"> <img src="img/waves.png" id="waves" > </div>    
+                <div class="box1" onmouseover="diVresimactive1('mainbox','origami')" onmouseout="diVresimpasive2('mainbox')"> <img src="img/origami.png" id="origami"  > </div>   
+                <div class="box1" onmouseover="diVresimactive1('mainbox','stars')" onmouseout="diVresimpasive2('mainbox')"> <img src="img/stars.png" id="stars2" > </div>    
             </div> 
         </div>
         <div><p class="textt" id="textt">Parallax also affects optical instruments such as rifle scopes, binoculars, microscopes, and twin-lens reflex cameras that view objects from slightly different angles. Many animals, along with humans, have two eyes with overlapping visual fields that use parallax to gain depth perception; this process is known as stereopsis. In computer vision the effect is used for computer stereo vision, and there is a device called a parallax rangefinder that uses it to find range, and in some variations also altitude to a target. </div>
@@ -76,20 +76,22 @@ window.addEventListener('scroll',function(){
 })
 
 
-function myFunction() {
-        document.getElementById("mainbox").style.color = "red";
+
+
+    function diVresimactive1(idsi,image){
+        console.log(idsi);
+        document.getElementById(idsi).style.backgroundImage= "url('img/imag.png')".replace("imag", image) ;
+       
+    }
+    function diVresimpasive2(idsi){
+        document.getElementById(idsi).style.backgroundImage= "none" ;
     }
 
 
-    function diVresimactive1(){
-        document.getElementById("mainbox").style.backgroundImage= "url('img/origami.png')" ;
-    }
-    function diVresimpasive2(){
-        document.getElementById("mainbox").style.backgroundImage= "none" ;
-    }
-    function diVresimpasive3(){
-        document.getElementById("mainbox").style.backgroundImage= "url('img\origami.png')" ;
-    }
+    
+
+   
+
 </script>  
 
 
